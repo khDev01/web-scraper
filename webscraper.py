@@ -2,46 +2,19 @@ from bs4 import BeautifulSoup
 import requests
 import json
 
-
-
-url = 'http://ethans_fake_twitter_site.surge.sh/'
+url = 'https://atom.io/'
 response = requests.get(url, timeout=5)
 content = BeautifulSoup(response.content, "html.parser")
 
-tweetArr = []
-for tweet in content.findAll('div', attrs={"class": "tweetcontainer"}):
-    tweetObject = {
-        "author": tweet.find('h2', attrs={"class": "author"}).text,
-        "date": tweet.find('h5', attrs={"class": "dateTime"}).text,
-        "tweet": tweet.find('p', attrs={"class": "content"}).text,
-        "likes": tweet.find('p', attrs={"class": "likes"}).text,
-        "shares": tweet.find('p', attrs={"class": "shares"}).text
+featureArr = []
+for features in content.find_all('h4'):
+    # print(features.text)
+    featureObj = {
+        "feature": content.h4.text
     }
-    tweetArr.append(tweetObject)
-with open('twitterData.json', 'w') as outfile:
-    json.dump(tweetArr, outfile)
-
-
-
-
-
-
-
-
-# url = 'https://atom.io/'
-# response = requests.get(url, timeout=5)
-# content = BeautifulSoup(response.content, "html.parser")
-#
-#
-# featureArr = []
-# for features in content.find_all('h4'):
-#     # print(features.text.encode())
-#     featureArr.append(features.text.encode())
-# with open('featureData.json', 'w') as outfile:
-#     json.dump(featureArr, outfile)
-#
-#
-#
+    featureArr.append(featureObj)
+with open('featureData.json', 'w') as outfile:
+    json.dump(featureArr, outfile)
 
 
 
