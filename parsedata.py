@@ -1,11 +1,7 @@
 import json
 
-with open('twitterData.json') as json_data:
+with open('featureData.json') as json_data:
     jsonData = json.load(json_data)
 
 for i in jsonData:
-    print(i ['date'])
-
-for i in jsonData:
-    if "hello" in i ['tweet'].lower():
-        print(i)
+    print(i ['feature'])
