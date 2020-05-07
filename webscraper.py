@@ -10,9 +10,10 @@ featureArr = []
 for features in content.find_all('h4'):
     # print(features.text)
     featureObj = {
-        "feature": content.h4.text
+        "feature": features.text
     }
     featureArr.append(featureObj)
+
 with open('featureData.json', 'w') as outfile:
     json.dump(featureArr, outfile)
 
