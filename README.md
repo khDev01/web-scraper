@@ -2,8 +2,10 @@
 
 used:
 * python
-  * python libraries BeautifulSoup and requests
+  * BeautifulSoup library
+  * request library
 
+data formats include json, csv, xml, sql db, excel and pdf - http://scrapingauthority.com/scraped-data-format/
 
 Page Scraper - Create an application which connects to a site and pulls out all links, or images, and saves them to a list.
 
@@ -11,5 +13,6 @@ Optional:
 * Organize the indexed content and don’t allow duplicates
 * Have it put the results into an easily searchable index file.
 
-https://hackernoon.com/building-a-web-scraper-from-start-to-finish-bb6b95388184
-* do not need to encode https://stackoverflow.com/questions/44682018/typeerror-object-of-type-bytes-is-not-json-serializable
+Alternatives
+* APIs: An Alternative to Web Scraping
+  * With APIs, you can avoid parsing HTML and instead access the data directly using formats like JSON and XML
