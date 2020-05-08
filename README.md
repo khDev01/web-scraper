@@ -16,3 +16,7 @@ Optional:
 Alternatives
 * APIs: An Alternative to Web Scraping
   * With APIs, you can avoid parsing HTML and instead access the data directly using formats like JSON and XML
+* Scrapy Vs. Beautifulsoup Vs. Selenium for Web Scraping
+  * scrapy - complex projects, fastest, not render JS
+  * Selenium - loads JS,
+  * BeautifulSoup - small projects, beginner-friendly, requires dependencies like request
